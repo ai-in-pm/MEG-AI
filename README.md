@@ -2,6 +2,8 @@
 
 A real-time human-AI communication chatbot inspired by Meta's brain-AI research. This project combines advanced language understanding with neural signal interpretation for an engaging, human-like conversation experience enhanced by brain-computer interface (BCI) technology.
 
+The development of this repository was inspired by https://ai.meta.com/blog/brain-ai-image-decoding-meg-magnetoencephalography/. 
+
 ## Features
 
 - Real-time neural signal processing and interpretation
