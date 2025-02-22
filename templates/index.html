@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain-AI Communication Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Brain-AI Communication Interface</h1>
+            <div class="status-indicator">
+                <span id="connection-status">Disconnected</span>
+                <span id="device-status">No Device</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="visualization-panel">
+                <div id="brain-activity-plot"></div>
+                <div id="frequency-spectrum-plot"></div>
+                <div class="brain-wave-indicators">
+                    <div class="wave-indicator" data-wave="delta">Delta</div>
+                    <div class="wave-indicator" data-wave="theta">Theta</div>
+                    <div class="wave-indicator" data-wave="alpha">Alpha</div>
+                    <div class="wave-indicator" data-wave="beta">Beta</div>
+                    <div class="wave-indicator" data-wave="gamma">Gamma</div>
+                </div>
+            </div>
+
+            <div class="chat-panel">
+                <div id="chat-messages"></div>
+                <div class="input-area">
+                    <button id="think-button" class="active">Think Mode</button>
+                    <button id="type-button">Type Mode</button>
+                    <div id="thinking-indicator">
+                        <div class="thinking-waves"></div>
+                        <span>Listening to your thoughts...</span>
+                    </div>
+                    <div id="typing-area" style="display: none;">
+                        <input type="text" id="text-input" placeholder="Type your message...">
+                        <button id="send-button">Send</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ai-panel">
+                <h3>AI Processing</h3>
+                <div class="ai-visualization">
+                    <div id="ai-confidence-meter"></div>
+                    <div id="ai-thinking-process"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
